@@ -72,15 +72,9 @@ class MarkdownConverter
   private
   def initialize
     @converter = Redcarpet::Markdown.new(Redcarpet::Render::HTMLwithSyntaxHighlight.new, {
-<<<<<<< HEAD
-        :autolink => true,
-        :fenced_code_blocks => true,
-        :no_intra_emphasis => true
-=======
         autolink: true,
         fenced_code_blocks: true,
         no_intra_emphasis: true
->>>>>>> aa46550c982ef04a1118f9b850c42594d6c063e2
       })
   end
 end
