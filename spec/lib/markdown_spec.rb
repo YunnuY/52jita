@@ -13,7 +13,7 @@ describe 'markdown' do
     subject { doc }
 
     # {{{ describe 'mention user'
-    
+
     describe "encoding with Chinese chars" do
       context "a simple" do
         let(:raw) { '#1楼 @ichord 刚刚发布，有点问题' }
@@ -225,7 +225,7 @@ describe 'markdown' do
     end
 
     # }}}
-    
+
     describe 'The code' do
       context '``` use with code' do
         let(:raw) {
@@ -233,44 +233,44 @@ describe 'markdown' do
           class Foo; end
           ```)
         }
-        
+
         specify { doc.css('pre').attr("class").value.should == "highlight plaintext" }
       end
-      
+
       context '```ruby use with code' do
         let(:raw) {
           %(```ruby
           class Foo; end
           ```)
         }
-        
+
         specify { doc.css('pre').attr("class").value.should == "highlight ruby" }
       end
-      
+
       context 'indent in raw with \t' do
         let(:raw) { "\t\tclass Foo; end" }
-        
+
         specify { doc.css('pre').should be_empty }
       end
-      
+
       context 'indent in raw with space' do
         let(:raw) { "    class Foo; end" }
-        
+
         specify { doc.css('pre').should be_empty }
       end
     end
-    
+
     describe 'Escape HTML tags' do
       context '<xxx> or a book names' do
         let(:raw) { "<Enterprise Integration Patterns> book" }
         its(:inner_html) { should == "<p>&lt;Enterprise Integration Patterns&gt; book</p>" }
       end
-      
+
       context '<img> tag' do
         let(:raw) { "<img src='aaa.jpg' /> aaa" }
         its(:inner_html) { should == "<p>&lt;img src='aaa.jpg' /&gt; aaa</p>" }
       end
-      
+
       context '<b> tag' do
         let(:raw) { "<b>aaa</b>" }
         its(:inner_html) { should == "<p>&lt;b&gt;aaa&lt;/b&gt;</p>" }
