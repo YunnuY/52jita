@@ -30,9 +30,9 @@
         <%= render_list :class => "nav" do |li|
            li << link_to(t("menu.home"), root_path)
            li << link_to(t("menu.topics"), topics_path)
-           li << link_to(t("menu.videos"), "#" )
-           li << link_to(t("menu.tablatures"), "#" )
-           li << link_to(t("menu.maps"), "#" )
+           li << link_to(t("menu.videos"), episodes_path)
+           li << link_to(t("menu.tablatures"), "/tablatures" )
+           li << link_to(t("menu.maps"), "/maps" )
            li << link_to(t("menu.users"), users_path)
          # li << link_to(t("menu.offline"), "#" )
          # li << link_to(t("menu.wiki"), pages_path ) if !mobile?
