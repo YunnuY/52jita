@@ -1,22 +1,22 @@
 require "spec_helper"
 
-describe SitesController do
+describe VideosController do
   describe "routing" do
 
     it "routes to #index" do
-      get("/sites").should route_to("sites#index")
+      get("/videos").should route_to("videos#index")
     end
 
     it "routes to #new" do
-      get("/sites/new").should route_to("sites#new")
+      get("/videos/new").should route_to("videos#new")
     end
 
     it "routes to #edit" do
-      get("/sites/1/edit").should route_to("sites#edit", :id => "1")
+      get("/videos/1/edit").should route_to("videos#edit", :id => "1")
     end
 
     it "routes to #create" do
-      post("/sites").should route_to("sites#create")
+      post("/videos").should route_to("videos#create")
     end
 
   end

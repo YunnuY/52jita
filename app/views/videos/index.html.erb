@@ -1,0 +1,7 @@
+<div class="movies">
+  <% if @videos.blank? %>
+    <div class="no_result">
+      无法找到匹配的资源，你可以试试调整过滤条件。<%= link_to "清除过滤", movie_list_filter_url %>
+    </div>
+  <% end %>
+</div>

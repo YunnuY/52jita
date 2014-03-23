@@ -1,8 +1,9 @@
 RubyChina::Application.routes.draw do
+  get "videos/index"
   require 'api'
   require "api_v2"
 
-  resources :episodes
+  resources :videos
   resources :sites
   resources :pages, :path => "wiki" do
     collection do
@@ -21,7 +22,6 @@ RubyChina::Application.routes.draw do
   end
 
   root :to => "home#index"
-  get "/videos"    => "home#_under_construction"
   get "/tablatures" => "home#_under_construction"
   get "/maps" => "home#_under_construction"
 
