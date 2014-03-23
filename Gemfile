@@ -97,6 +97,7 @@ group :development, :test do
   gem 'rvm-capistrano', require: false
   gem 'capistrano-rbenv', '1.0.5', require: false
   gem 'rspec-rails', '~> 2.13.2'
+  gem 'ZenTest'
   gem 'factory_girl_rails'
   gem 'database_cleaner'
   gem "rspec-cells", '0.1.7'

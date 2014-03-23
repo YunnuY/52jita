@@ -51,6 +51,7 @@ GIT
 GEM
   remote: http://ruby.taobao.org/
   specs:
+    ZenTest (4.9.5)
     actionmailer (4.0.3)
       actionpack (= 4.0.3)
       mail (~> 2.5.4)
@@ -404,6 +405,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  ZenTest
   actionpack-action_caching (= 1.0.0)
   anjlab-bootstrap-rails (= 2.0.3.2)
   api_taster (= 0.6.0)
